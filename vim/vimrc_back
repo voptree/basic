@@ -1,0 +1,53 @@
+set encoding=utf-8 fileencodings=utf-8
+:set tags+=~/.vim/sys_tags
+:set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+
+"taglist settings as follow
+let Tlist_Auto_Open=1
+let Tlist_Use_Right_Window = 1
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+
+
+"tables代替4个空格
+set ts=4
+
+"syntax on
+syntax on
+
+" 为C程序提供自动缩进
+set smartindent
+set smartindent      " 智能对齐方式
+set shiftwidth=4     " 换行时行间交错使用4个空格
+set autoindent       " 自动对齐
+set ai!              " 设置自动缩进
+"关掉智能补全时的预览窗口
+set completeopt=longest,menu
+"加了这句才可以用智能补全
+filetype plugin indent on
+
+
+"colorscheme ron
+colorscheme murphy
+"set mouse=a
+
+set ruler
+set rulerformat=%20(%2*%<%f%=\ %m%r\ %3l\ %c\ %p%%%)
+
+set foldenable      " 允许折叠  
+"set fdm=manual  " 手动折叠
+set fdm=syntax 	"c语法折叠
+
+
+set showcmd
+" autocmd InsertLeave * se cuc  " 用浅色高亮当前行
+"autocmd InsertEnter * se cul    " 用浅色高亮当前行
+
+set cursorcolumn
+set cursorline
+highlight CursorLine   cterm=NONE ctermbg=green ctermfg=White guibg=NONE guifg=NONE
+highlight CursorColumn cterm=NONE ctermbg=green ctermfg=White guibg=NONE guifg=NONE
+
+
+set showmatch        " 设置匹配模式，类似当输入一个左括号时会匹配相应的那个右括号
