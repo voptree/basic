@@ -1,5 +1,5 @@
-all:
-	g++ -o main_test main_test.cpp --std=c++11
+all: 
+	gcc -o main_test main_test.cpp -lstdc++
 
-clean:
-	rm -rf ./*.o
+clean :
+	rm ./main_test
